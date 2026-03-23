@@ -1,6 +1,6 @@
 # Events 日历展示应用 - 完整源代码
 
----
+***
 
 ## 依赖导入
 
@@ -13,7 +13,7 @@ import calendar
 import sqlite3
 ```
 
----
+***
 
 ## 配置常量
 
@@ -30,7 +30,7 @@ DEFAULT_TYPES = ['Feature', 'Bugfix', 'Meeting', 'Review', 'Other']
 DB_PATH = 'events.db'
 ```
 
----
+***
 
 ## 数据库操作类
 
@@ -187,7 +187,7 @@ class Database:
         return colors
 ```
 
----
+***
 
 ## 数据加载与验证
 
@@ -227,7 +227,7 @@ def validate_data(df: pd.DataFrame) -> tuple[bool, List[str]]:
     return len(errors) == 0, errors
 ```
 
----
+***
 
 ## 日历渲染
 
@@ -304,7 +304,7 @@ def render_calendar_html(year: int, month: int, events_df: pd.DataFrame, type_co
     return html
 ```
 
----
+***
 
 ## Session State 管理
 
@@ -325,7 +325,7 @@ def init_session():
         st.session_state.sample_loaded = False
 ```
 
----
+***
 
 ## 模拟数据
 
@@ -363,7 +363,7 @@ def clear_all_data(db: Database):
         return False, str(e)
 ```
 
----
+***
 
 ## 主界面
 
@@ -607,19 +607,19 @@ if __name__ == "__main__":
     main()
 ```
 
----
+***
 
 ## 代码统计
 
-| 指标 | 数值 |
-|------|------|
-| 总代码行数 | ~650行 |
-| 函数数量 | 12个 |
-| 类数量 | 1个 (Database) |
-| 数据库表 | 2个 |
-| 模拟数据 | 52条 |
+| 指标    | 数值            |
+| ----- | ------------- |
+| 总代码行数 | \~650行        |
+| 函数数量  | 12个           |
+| 类数量   | 1个 (Database) |
+| 数据库表  | 2个            |
+| 模拟数据  | 52条           |
 
----
+***
 
 ## 依赖列表 (requirements.txt)
 
